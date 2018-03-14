@@ -11,12 +11,6 @@ public class DemoClass
 		System.out.println(result);
 	}
 	
-	public void sub()
-	{
-		result=a-b;
-		System.out.println(result);
-	}
-	
 	
 	public static void main(String[] args) 
 	{
