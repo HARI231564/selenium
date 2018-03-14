@@ -9,6 +9,7 @@ public class DemoClass
 	{
 		result=a+b;
 		System.out.println(result);
+		System.out.println(result);
 	}
 	
 	
