@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.396 sec - in TestSuite
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 27.018 sec <<< FAILURE! - in TestSuite
+purchaseTwoItems(com.automation.AutomationPractice.TC001_PurchaseTwoItems)  Time elapsed: 1.047 sec  <<< FAILURE!
+java.lang.ClassCastException: java.util.ArrayList cannot be cast to org.openqa.selenium.WebElement
+	at com.automation.AutomationPractice.TC001_PurchaseTwoItems.purchaseTwoItems(TC001_PurchaseTwoItems.java:38)
+

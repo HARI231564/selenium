@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-RegressionSuite">
-              <span class="suite-name border-passed">RegressionSuite</span>
+              <span class="suite-name border-failed">RegressionSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-RegressionSuite">
-                    <span>D:\Selenium Projects\AutomationPractice\testng.xml</span>
+                    <span>C:\Users\Suuresh\git\selenium\AutomationPractice\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,  2 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-RegressionSuite" class="hide-methods failed suite-RegressionSuite"> (hide)</a> <!-- hide-methods failed suite-RegressionSuite -->
+                      <a href="#" panel-name="suite-RegressionSuite" class="show-methods failed suite-RegressionSuite"> (show)</a> <!-- show-methods failed suite-RegressionSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-RegressionSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.automation.AutomationPractice.TC001_PurchaseTwoItems" hash-for-method="purchaseTwoItems">purchaseTwoItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-RegressionSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-RegressionSuite" class="hide-methods skipped suite-RegressionSuite"> (hide)</a> <!-- hide-methods skipped suite-RegressionSuite -->
+                      <a href="#" panel-name="suite-RegressionSuite" class="show-methods skipped suite-RegressionSuite"> (show)</a> <!-- show-methods skipped suite-RegressionSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-RegressionSuite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.automation.AutomationPractice.TC001_PurchaseTwoItems" hash-for-method="purchaseTwoItems">purchaseTwoItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.automation.AutomationPractice.TC001_PurchaseTwoItems" hash-for-method="purchaseTwoItems">purchaseTwoItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-RegressionSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +136,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.automation.AutomationPractice.TC001_PurchaseTwoItems" hash-for-method="customerLogin">customerLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.automation.AutomationPractice.TC001_PurchaseTwoItems" hash-for-method="purchaseTwoItems">purchaseTwoItems</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RegressionSuite -->
@@ -122,6 +150,55 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-RegressionSuite" class="panel RegressionSuite">
+          <div class="suite-RegressionSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.automation.AutomationPractice.TC001_PurchaseTwoItems</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaseTwoItems">
+                  </a> <!-- purchaseTwoItems -->
+                  <span class="method-name">purchaseTwoItems</span>
+                  <div class="stack-trace">java.lang.ClassCastException: java.util.ArrayList cannot be cast to org.openqa.selenium.WebElement
+	at com.automation.AutomationPractice.TC001_PurchaseTwoItems.purchaseTwoItems(TC001_PurchaseTwoItems.java:38)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-failed -->
+          <div class="suite-RegressionSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.automation.AutomationPractice.TC001_PurchaseTwoItems</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaseTwoItems">
+                  </a> <!-- purchaseTwoItems -->
+                  <span class="method-name">purchaseTwoItems</span>
+                  <div class="stack-trace">java.lang.ClassCastException: java.util.ArrayList cannot be cast to org.openqa.selenium.WebElement
+	at com.automation.AutomationPractice.TC001_PurchaseTwoItems.purchaseTwoItems(TC001_PurchaseTwoItems.java:38)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaseTwoItems">
+                  </a> <!-- purchaseTwoItems -->
+                  <span class="method-name">purchaseTwoItems</span>
+                  <div class="stack-trace">java.lang.ClassCastException: java.util.ArrayList cannot be cast to org.openqa.selenium.WebElement
+	at com.automation.AutomationPractice.TC001_PurchaseTwoItems.purchaseTwoItems(TC001_PurchaseTwoItems.java:38)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-skipped -->
           <div class="suite-RegressionSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -135,19 +212,12 @@
                   <span class="method-name">customerLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="purchaseTwoItems">
-                  </a> <!-- purchaseTwoItems -->
-                  <span class="method-name">purchaseTwoItems</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-RegressionSuite-class-passed -->
         </div> <!-- panel RegressionSuite -->
         <div panel-name="test-xml-RegressionSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Selenium Projects\AutomationPractice\testng.xml</span>
+            <span class="header-content">C:\Users\Suuresh\git\selenium\AutomationPractice\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,20 +271,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'customerLogin')
 data.setCell(0, 2, 'com.automation.AutomationPractice.TC001_PurchaseTwoItems')
-data.setCell(0, 3, 7700);
+data.setCell(0, 3, 9712);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'purchaseTwoItems')
 data.setCell(1, 2, 'com.automation.AutomationPractice.TC001_PurchaseTwoItems')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 360);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'purchaseTwoItems')
+data.setCell(2, 2, 'com.automation.AutomationPractice.TC001_PurchaseTwoItems')
+data.setCell(2, 3, 62);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'purchaseTwoItems')
+data.setCell(3, 2, 'com.automation.AutomationPractice.TC001_PurchaseTwoItems')
+data.setCell(3, 3, 41);
 window.suiteTableData['RegressionSuite']= { tableData: data, tableDiv: 'times-div-RegressionSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-RegressionSuite">
               </div> <!-- times-div-RegressionSuite -->
             </div> <!-- times-div -->
@@ -226,25 +304,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">purchaseTwoItems</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test started Running:purchaseTwoItems</span>
-                <span class="reporter-method-output">Test is success:purchaseTwoItems</span>
-                <span class="reporter-method-output"><a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png' height='100' width='100'/> </a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">customerLogin</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Test started Running:customerLogin</span>
-                <span class="reporter-method-output">Clicked On SignIn LinkUsing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> link text: Sign in]</span>
-                <span class="reporter-method-output">Entered Email Addressusing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: email]</span>
-                <span class="reporter-method-output">Entered Password using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: passwd]</span>
+                <span class="reporter-method-output">Clicked On SignIn LinkUsing with Object[[ChromeDriver: chrome on XP (ff94e8ea88248ef87c41927f9da6aca2)] -> link text: Sign in]</span>
+                <span class="reporter-method-output">Entered Email Addressusing with Object[[ChromeDriver: chrome on XP (ff94e8ea88248ef87c41927f9da6aca2)] -> id: email]</span>
+                <span class="reporter-method-output">Entered Password using with Object [[ChromeDriver: chrome on XP (ff94e8ea88248ef87c41927f9da6aca2)] -> id: passwd]</span>
                 <span class="reporter-method-output">Clicked on SubmitButton using with Object Proxy element for: DefaultElementLocator 'By.id: SubmitLogin'</span>
-                <span class="reporter-method-output">Verified Account details using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> xpath: //h1[text()='My account']]</span>
+                <span class="reporter-method-output">Verified Account details using with Object [[ChromeDriver: chrome on XP (ff94e8ea88248ef87c41927f9da6aca2)] -> xpath: //h1[text()='My account']]</span>
                 <span class="reporter-method-output">Clicked on Home Linkusing with Object Proxy element for: DefaultElementLocator 'By.xpath: //a[@title='Return to Home']'</span>
                 <span class="reporter-method-output">Test is success:customerLogin</span>
-                <span class="reporter-method-output"><a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png' height='100' width='100'/> </a></span>
+                <span class="reporter-method-output"><a href='C:\Users\Suuresh\git\selenium\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_11_30_05.png'> <img src='C:\Users\Suuresh\git\selenium\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_11_30_05.png' height='100' width='100'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">purchaseTwoItems</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test started Running:purchaseTwoItems</span>
+                <span class="reporter-method-output"><a href='C:\Users\Suuresh\git\selenium\AutomationPractice\src\main\java\com\automation\AutomationPractice\failure_screenshots\purchaseTwoItems_16_05_2018_11_30_06.png'> <img src='C:\Users\Suuresh\git\selenium\AutomationPractice\src\main\java\com\automation\AutomationPractice\failure_screenshots\purchaseTwoItems_16_05_2018_11_30_06.png' height='100' width='100'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">purchaseTwoItems</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test started Running:purchaseTwoItems</span>
+                <span class="reporter-method-output">Retrying test purchaseTwoItems with status FAILURE for the 2 time(s).</span>
+                <span class="reporter-method-output">Test is skipped:purchaseTwoItems</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">purchaseTwoItems</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test started Running:purchaseTwoItems</span>
+                <span class="reporter-method-output">Retrying test purchaseTwoItems with status FAILURE for the 1 time(s).</span>
+                <span class="reporter-method-output">Test is skipped:purchaseTwoItems</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,15 +362,25 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">customerLogin</span>
-                <span class="method-start">17452 ms</span>
+                <span class="method-start">13115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">purchaseTwoItems</span>
-                <span class="method-start">26010 ms</span>
+                <span class="method-start">23943 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">purchaseTwoItems</span>
+                <span class="method-start">24305 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">purchaseTwoItems</span>
+                <span class="method-start">24347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endProcess</span>
-                <span class="method-start">26786 ms</span>
+                <span class="method-start">25393 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

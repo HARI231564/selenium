@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.Random;
 
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class BasePage 
 {
@@ -95,6 +96,63 @@ public class BasePage
 		}
 	}
 	
+	public static boolean selectValuesDrpDwn(WebElement element, String selType, int index, String value,
+			String visibleText) {
+		boolean isSelected = false;
+		try {
+			Select objSelect = new Select(element);
+			switch (selType.toUpperCase()) {
+			case "INDEX":
+				objSelect.selectByIndex(index);
+				isSelected = true;
+				break;
+
+			case "VALUE":
+				objSelect.selectByValue(value);
+				isSelected = true;
+				break;
+
+			case "VISIBLETEXT":
+				objSelect.selectByVisibleText(visibleText);
+				isSelected = true;
+				break;
+
+			default:
+				
+				
+				break;
+			}
+			if (isSelected) {
+				
+				WaitForJStoLoad();
+			} else {
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		WaitForJStoLoad();
+		return isSelected;
+	}
+	
+	public static boolean WaitForJStoLoad() {
+		boolean jsLoad = false;
+		try {
+			for (int i = 0; i < 180; i++) {
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				jsLoad = (Boolean) executor.executeScript("return jQuery.active == 0");
+				Thread.sleep(1000);
+				if (jsLoad)
+					break;
+			}
+			if (!jsLoad) {
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return jsLoad;
+	}
 	
 	
 	public void selectOption(WebElement element,int option)
@@ -120,6 +178,12 @@ public class BasePage
 	public void switchToDefaultContent()
 	{
 		driver.switchTo().defaultContent();
+	}
+	
+	public static void domClick(WebElement element){
+	
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element); 
 	}
 	
 	
