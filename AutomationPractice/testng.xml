@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionSuite">
+ 
+ <listeners>
+ 	<listener class-name="com.automation.AutomationPractice.Listners.Listener"></listener>
+ 	<listener class-name="com.automation.AutomationPractice.Listners.RetryListener"></listener>
+ </listeners>
+
+  <test thread-count="1" name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.automation.AutomationPractice.TC001_PurchaseTwoItems"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+</suite> <!-- RegressionSuite -->

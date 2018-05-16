@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Test started Running:customerLogin]]>
+    </line>
+    <line>
+      <![CDATA[Clicked On SignIn LinkUsing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> link text: Sign in]]]>
+    </line>
+    <line>
+      <![CDATA[Entered Email Addressusing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: email]]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: passwd]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on SubmitButton using with Object Proxy element for: DefaultElementLocator 'By.id: SubmitLogin']]>
+    </line>
+    <line>
+      <![CDATA[Verified Account details using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> xpath: //h1[text()='My account']]]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Home Linkusing with Object Proxy element for: DefaultElementLocator 'By.xpath: //a[@title='Return to Home']']]>
+    </line>
+    <line>
+      <![CDATA[Test is success:customerLogin]]>
+    </line>
+    <line>
+      <![CDATA[<a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png' height='100' width='100'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Test started Running:purchaseTwoItems]]>
+    </line>
+    <line>
+      <![CDATA[Test is success:purchaseTwoItems]]>
+    </line>
+    <line>
+      <![CDATA[<a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png' height='100' width='100'/> </a>]]>
+    </line>
+  </reporter-output>
+  <suite name="RegressionSuite" duration-ms="26800" started-at="2018-05-16T16:23:33Z" finished-at="2018-05-16T16:24:00Z">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="26800" started-at="2018-05-16T16:23:33Z" finished-at="2018-05-16T16:24:00Z">
+      <class name="com.automation.AutomationPractice.TC001_PurchaseTwoItems">
+        <test-method status="PASS" signature="startProcess(java.lang.String)[pri:0, instance:com.automation.AutomationPractice.TC001_PurchaseTwoItems@57855c9a]" name="startProcess" is-config="true" duration-ms="17442" started-at="2018-05-16T16:23:33Z" finished-at="2018-05-16T16:23:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startProcess -->
+        <test-method status="PASS" signature="customerLogin()[pri:0, instance:com.automation.AutomationPractice.TC001_PurchaseTwoItems@57855c9a]" name="customerLogin" duration-ms="7700" started-at="2018-05-16T16:23:51Z" finished-at="2018-05-16T16:23:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started Running:customerLogin]]>
+            </line>
+            <line>
+              <![CDATA[Clicked On SignIn LinkUsing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> link text: Sign in]]]>
+            </line>
+            <line>
+              <![CDATA[Entered Email Addressusing with Object[[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: email]]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> id: passwd]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on SubmitButton using with Object Proxy element for: DefaultElementLocator 'By.id: SubmitLogin']]>
+            </line>
+            <line>
+              <![CDATA[Verified Account details using with Object [[ChromeDriver: chrome on XP (17626500ae56ae12aa95f5241418311c)] -> xpath: //h1[text()='My account']]]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Home Linkusing with Object Proxy element for: DefaultElementLocator 'By.xpath: //a[@title='Return to Home']']]>
+            </line>
+            <line>
+              <![CDATA[Test is success:customerLogin]]>
+            </line>
+            <line>
+              <![CDATA[<a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\customerLogin_16_05_2018_09_53_58.png' height='100' width='100'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- customerLogin -->
+        <test-method status="PASS" signature="purchaseTwoItems()[pri:1, instance:com.automation.AutomationPractice.TC001_PurchaseTwoItems@57855c9a]" name="purchaseTwoItems" duration-ms="1" started-at="2018-05-16T16:23:59Z" finished-at="2018-05-16T16:23:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Test started Running:purchaseTwoItems]]>
+            </line>
+            <line>
+              <![CDATA[Test is success:purchaseTwoItems]]>
+            </line>
+            <line>
+              <![CDATA[<a href='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png'> <img src='D:\Selenium Projects\AutomationPractice\src\main\java\com\automation\AutomationPractice\success_screenshots\purchaseTwoItems_16_05_2018_09_53_59.png' height='100' width='100'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- purchaseTwoItems -->
+        <test-method status="PASS" signature="endProcess()[pri:0, instance:com.automation.AutomationPractice.TC001_PurchaseTwoItems@57855c9a]" name="endProcess" is-config="true" duration-ms="0" started-at="2018-05-16T16:24:00Z" finished-at="2018-05-16T16:24:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- com.automation.AutomationPractice.TC001_PurchaseTwoItems -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- RegressionSuite -->
+</testng-results>
