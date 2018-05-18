@@ -5,16 +5,19 @@
     <listener class-name="com.automation.AutomationPractice.Listners.Listener"/>
     <listener class-name="com.automation.AutomationPractice.Listners.RetryListener"/>
   </listeners>
-  <test thread-count="5" name="ChromeTest(failed)">
+  <test thread-count="5" name="Previous(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.automation.AutomationPractice.TC001_PurchaseTwoItems">
+      <class name="com.automation.AutomationPractice.TC002_PreviousOrders">
         <methods>
           <include name="endProcess"/>
-          <include name="customerLogin"/>
           <include name="startProcess"/>
+          <include name="previousOrdersList"/>
+          <include name="tearDown"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
         </methods>
-      </class> <!-- com.automation.AutomationPractice.TC001_PurchaseTwoItems -->
+      </class> <!-- com.automation.AutomationPractice.TC002_PreviousOrders -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- Previous(failed) -->
 </suite> <!-- Failed suite [RegressionSuite] -->

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite]">
+  <listeners>
+    <listener class-name="com.automation.AutomationPractice.Listners.Listener"/>
+    <listener class-name="com.automation.AutomationPractice.Listners.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Previous(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.automation.AutomationPractice.TC001_PurchaseTwoItems">
+      <class name="com.automation.AutomationPractice.TC002_PreviousOrders">
         <methods>
           <include name="endProcess"/>
-          <include name="customerLogin"/>
-          <include name="purchaseTwoItems"/>
           <include name="startProcess"/>
+          <include name="previousOrdersList"/>
+          <include name="tearDown"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
         </methods>
-      </class> <!-- com.automation.AutomationPractice.TC001_PurchaseTwoItems -->
+      </class> <!-- com.automation.AutomationPractice.TC002_PreviousOrders -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Previous(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->
