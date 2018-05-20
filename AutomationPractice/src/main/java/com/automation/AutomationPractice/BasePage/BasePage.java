@@ -49,7 +49,7 @@ public class BasePage extends Reports {
 		{
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "//Drivers//chromedriver.exe");
 			driver=new ChromeDriver();
-			logger.log(Status.INFO, "Message");
+			logger.log(Status.INFO, "Firefox has been launched");
 		}
 		else if(browser.equalsIgnoreCase("FIREFOX"))
 		{
