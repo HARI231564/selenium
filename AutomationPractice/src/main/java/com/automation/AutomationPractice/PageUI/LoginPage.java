@@ -6,9 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
+
 
 import com.automation.AutomationPractice.BasePage.BasePage;
+import com.aventstack.extentreports.Status;
 
 
 public class LoginPage extends BasePage
@@ -33,28 +34,30 @@ public class LoginPage extends BasePage
 			try {
 				//Click on SignIn
 				signIn.click();
-				Reporter.log("Clicked On SignIn Link" + "Using with Object" + signIn.toString());
+				logger.log(Status.INFO, "Clicked on SignIn");
+				
 				
 				//Enter Email ID
 				this.email.sendKeys(email);
-				Reporter.log("Entered Email Address" + "using with Object" + this.email.toString());
+				logger.log(Status.INFO,"Entered Email Address : " + email);
 				
 				//Enter Password
 				this.password.sendKeys(password);
-				Reporter.log("Entered Password " + "using with Object " + this.password.toString());
+				logger.log(Status.INFO, "Entered Password  : " + password);
 				
 				//Click on Submit Login
 				submitLogin.click();
-				Reporter.log("Clicked on SubmitButton " + "using with Object " + submitLogin.toString());
+				logger.log(Status.INFO, "Clicked on SubmitButton ");
 				
 				//Very the Account 
 				verifyLoginPage();
 				
 				//Click on Home Link
 				homeLink.click();
-				Reporter.log("Clicked on Home Link" + "using with Object " + homeLink.toString());
-			} catch (Exception e) {
-				
+				logger.log(Status.INFO, "Clicked on Home Link");
+			} 
+			catch (Exception e) 
+			{	
 				e.printStackTrace();
 			}
 	}
@@ -65,7 +68,7 @@ public class LoginPage extends BasePage
 	public boolean verifyLoginPage()
 	{
 		String actualText = verifyAccount.getText();
-		Reporter.log("Verified Account details using with Object " + verifyAccount.toString());
+		logger.log(Status.INFO, "Verified Account details : " + actualText);
 		String expectedText="My account";
 		assertTrue(actualText.equalsIgnoreCase(expectedText));
 		return false;

@@ -9,14 +9,10 @@ import com.aventstack.extentreports.Status;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+
 import org.testng.annotations.AfterClass;
 
 public class TC002_PreviousOrders extends BasePage {
@@ -31,14 +27,14 @@ public class TC002_PreviousOrders extends BasePage {
 		browserLaunch(browser, getValue("baseprodurl"));
 	}
 
-	@Test(priority = 0)
+	@Test
 	public void customerLogin() {
 		logger = report.createTest("User Login");
 		page = new LoginPage(driver);
 		page.customerLogin("qatest@gmail.com", "password");
 	}
 
-	@Test(priority = 1)
+	@Test(dependsOnMethods= {"customerLogin"})
 	public void previousOrdersList() {
 		logger = report.createTest("Previous Orders List");
 
@@ -58,8 +54,8 @@ public class TC002_PreviousOrders extends BasePage {
 		}
 
 		driver.findElement(By.xpath("//*[@id='order-list']/tbody/tr[1]/td[7]/a[1]/span")).click();
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,)", "1000");
+		//JavascriptExecutor jse = (JavascriptExecutor)driver;
+		//jse.executeScript("window.scrollBy(0,)", "1000");
 		String prevOrderColor = driver
 				.findElement(By.xpath("//*[@id='order-detail-content']/table/tbody/tr[1]/td[2]/label")).getText()
 				.trim();
@@ -75,7 +71,7 @@ public class TC002_PreviousOrders extends BasePage {
 
 	@AfterClass
 	public void endProcess() {
-
+		driver.close();
 	}
 
 }

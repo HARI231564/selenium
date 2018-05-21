@@ -32,14 +32,14 @@ public class TC001_PurchaseTwoItems extends BasePage {
 		browserLaunch(browser, getValue("baseprodurl"));
 	}
 
-	@Test(priority = 0)
+	@Test
 	public void customerLogin() {
 		logger = report.createTest("User Login");
 		page = new LoginPage(driver);
 		page.customerLogin("qatest@gmail.com", "password");
 	}
 
-	@Test(priority = 1)
+	@Test(dependsOnMethods= {"customerLogin"})
 	public void purchaseTwoItems() {
 		logger = report.createTest("Purchase Products");
 		String beforeSize = null;
