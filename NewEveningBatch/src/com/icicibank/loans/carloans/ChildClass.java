@@ -10,6 +10,8 @@ public class ChildClass extends FirstAbstract
 		c.m1();
 		c.m2();
 		System.out.println("Hi");
+		System.out.println("Hi");
+		System.out.println("hello");
 	}
 
 	@Override
